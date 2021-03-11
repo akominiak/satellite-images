@@ -1,0 +1,37 @@
+header {
+    .container{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 20px;
+        .logo {
+            align-self: flex-start; 
+            color: white;
+            font-size: 26px;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            letter-spacing: 1px;
+        }
+        .input-search-wrap {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            .input-search {
+                border: 1px solid gray;
+                border-radius: 8px;
+                padding: 6px 16px;
+                background-color: rgba(255,255,255, 0.9);
+                span {
+                    display: inline-flex;
+                    vertical-align:middle;
+                }
+                input {
+                    border: none;
+                    width: 400px;
+                    outline: none;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

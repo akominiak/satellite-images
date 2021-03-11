@@ -1,0 +1,66 @@
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+    .image-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 700px;
+        width: 490px;
+        background-color: #fff;
+        border-radius: 12px;
+        border: 1px solid gray;
+        .photo {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 70%;
+            border-radius: 12px 12px 0 0;
+        }
+        .description {
+            padding: 30px 20px;
+            h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            p {
+                margin: 12px 0;
+            }
+        }
+        .loader-wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            .loader {
+                background-image: url('../assets/images/loading.svg');
+                width: 100%;
+                height: 100%;
+                animation: spin 2s linear infinite;
+            }
+        }
+
+    }
+    .map {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        height: 200px;
+        width: 300px;
+        padding: 0;
+      }
+}
+@keyframes spin {
+    from {
+         transform: rotate(0deg);
+    }
+    to {
+         transform: rotate(360deg);
+    }
+}
