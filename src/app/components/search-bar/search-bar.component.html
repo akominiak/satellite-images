@@ -5,7 +5,8 @@
             <div class="input-search">
                 <input type="text" placeholder="Find localization" [formControl]="localizationControl"
                     [matAutocomplete]="auto" (keyup)="handleSearch()">
-                <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getSelected($event.option.value)'>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)='getSelected($event.option.value)'
+                    [displayWith]="displayFn">
                     <mat-option *ngFor="let localization of filteredLocalizations" [value]="localization">
                         {{localization.display_name}}
                     </mat-option>

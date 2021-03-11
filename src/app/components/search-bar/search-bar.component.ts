@@ -16,14 +16,19 @@ export class SearchBarComponent {
   constructor(private localizationService: LocalizationService) { }
 
   handleSearch(): void {
-    setTimeout(() => {
-      this.localizationService.getLocalizations(this.localizationControl.value).subscribe(response => {
-        this.filteredLocalizations = response;
-      })
-    }, 1000)
+    this.localizationService.getLocalizations(this.localizationControl.value).subscribe(response => {
+      this.filteredLocalizations = response;
+    })
   }
 
-  getSelected(loc: string): void {
+  getSelected(loc: any): void {
     this.filterLocalizationEvent.emit(loc);
+  }
+
+  displayFn(loc: any): string {
+    if (loc)
+      return loc.display_name;
+    else
+      return '';
   }
 }
