@@ -6,9 +6,8 @@ header {
         padding: 20px;
         .logo {
             align-self: flex-start; 
-            color: white;
+            color: #222;
             font-size: 26px;
-            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             letter-spacing: 1px;
         }
         .input-search-wrap {
@@ -35,3 +34,22 @@ header {
         }
     }
 }
+@media (max-width: 1248px) {
+    header {
+        .container{
+            height: 60px;
+            .logo {
+                display: none;
+            } 
+            .input-search-wrap {
+                width: 350px;
+                .input-search {
+                    input {
+                        width: 290px;
+                    }
+                }
+            }
+        }
+    }
+}
+
